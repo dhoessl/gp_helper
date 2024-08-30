@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Grepo Alliance Member State
 // @namespace     dhoessl_grepo
-// @version       0.1.0
+// @version       0.1.1
 // @author        dhoessl
 // @homepage      https://github.com/dhoessl/gp_helper/
 // @updateURL     https://raw.githubusercontent.com/dhoessl/gp_helper/master/gp_ally_stat_display_tampermonkey.js
