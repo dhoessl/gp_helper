@@ -20,18 +20,18 @@ function buildCustomWindow(custom_data){
       "/images/game/ally/indicators/" + state.split("_")[2] + ".png"
     );
     var state_name = document.createElement("strong");
-    var break_element = document.createElement("br");
     state_name.textContent = state.split("_")[2];
     // Add Header to Base Element
     state_element.append(state_image);
     state_element.append(state_name);
-    state_element.append(break_element);
+    var player_par = document.createElement("p");
     // Add Users to the specific state
     for(var user=0; user < custom_data[state].length; user++){
-        console.log(custom_data[state][user])
-        var user_element = document.createElement("p");
-        user_element.textContent = custom_data[state][user];
-        state_element.append(user_element);
+      var user_element = document.createElement("a");
+      user_element.setAttribute("href", custom_data[state][user]["link"]);
+      user_element.classList.add("bbcodes", "bbcodes_player");
+      user_element.textContent = custom_data[state][user]['name'];
+      state_element.append(user_element);
     }
     // Add state base element to box element
     inner_box.append(state_element);
@@ -77,12 +77,14 @@ function checkAllyMember(){
         // Collecte State and every user
         var name = elements[user].children[0].textContent.replaceAll(" ", "").replace('\n',"");
         var state = elements[user].children[0].children[0].getAttribute("class");
+        var link = elements[user].childNodes[1].getAttribute("href");
         // Check if a user is marked as inactive
         if(state != "idle_status_green" && state != "idle_status_online"){
           // Create list if not exist
           if(!(state in inactives)){ inactives[state] = []; }
           // add user to state list
-          inactives[state].push(name);
+          var player = {"name": name, "link": link}
+          inactives[state].push(player);
         }
       }
       // close ally window if it was opened by the script
