@@ -16,7 +16,7 @@
   var JSscript = document.createElement("script");
   JSscript.type = 'text/javascript';
   // Content needs to be delivered from jsdelivr because github sending out wronge Mime Type :/
-  JSscript.src = "https://cdn.jsdelivr.net/gh/dhoessl/gp_helper/gp_ally_stat_display_0.1.6.js";
+  JSscript.src = "https://cdn.jsdelivr.net/gh/dhoessl/gp_helper/gp_ally_stat_display_0.1.7.js";
   document.getElementsByTagName("head")[0].appendChild(JSscript);
 })();
 
