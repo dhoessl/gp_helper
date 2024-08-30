@@ -104,7 +104,7 @@ function isAllyWindowOpen(){
       }
     }
   );
-  return False;
+  return false;
 }
 
 function perodicallyCheckAllyMember(){
