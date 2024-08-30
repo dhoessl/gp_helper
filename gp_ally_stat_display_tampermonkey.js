@@ -16,6 +16,6 @@
   var JSscript = document.createElement("script");
   JSscript.type = 'text/javascript';
   JSscript.src = "https://github.com/dhoessl/gp_helper/gp_ally_stat_display.js";
-  document.getElementByTagName("head")[0].appendChild(JSscript);
+  document.getElementsByTagName("head")[0].appendChild(JSscript);
 })();
 
