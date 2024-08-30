@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Grepo Alliance Member State
 // @namespace     dhoessl_grepo
-// @version       0.1.1
+// @version       0.1.2
 // @author        dhoessl
 // @homepage      https://github.com/dhoessl/gp_helper/
 // @updateURL     https://raw.githubusercontent.com/dhoessl/gp_helper/master/gp_ally_stat_display_tampermonkey.js
@@ -15,7 +15,7 @@
 (function() {
   var JSscript = document.createElement("script");
   JSscript.type = 'text/javascript';
-  JSscript.src = "https://github.com/dhoessl/gp_helper/gp_ally_stat_display.js";
+  JSscript.src = "https://raw.githubusercontent.com/dhoessl/gp_helper/master/gp_ally_stat_display.js";
   document.getElementsByTagName("head")[0].appendChild(JSscript);
 })();
 
